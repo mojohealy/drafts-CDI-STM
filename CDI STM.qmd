@@ -1,0 +1,136 @@
+---
+title: "CDI STM 30 Years"
+editor: visual
+bibliography: "library.bib"
+csl: "apa7.csl"
+format:
+  apaquarto-docx: default
+---
+
+# Introduction
+
+*CDI* was first published in 1996.
+
+-   By who?
+
+-   For what audience?
+
+-   For what purpose?
+
+Since then, \[growth and prestige statistics\].
+
+*CDI* is among the most interdisciplinary of CD journals, with articles ranging from vocpsy, org psych, HRM, leadership, GE, career counselling, and labour studies (?).
+
+Why a review at 30?
+
+## Intellectual, social, and conceptual structure of CDI
+
+Different approaches to science mapping can illustrate the characterisics of and structures within a body of literature [@cuccurullo.aria2022; @zupic.cater2015]. Citation-based analyses reveal the *intellectual structure* of a field, highlighting foundational works and tracing the influence of ideas through citation networks. Co-authorship, institutional affiliations, and country collaboration networks reveal the *social structure* of a field, highlighting how scholars connect and collaborate. Key word co-occurence, bibliographic coupling, and topic modelling reveal the *conceptual structure* of a field, highlighting themes, topics, and patterns of research content.
+
+Recently, Varma et al., [-@varma.kumar.ea2021] conducted a bibliometric review of 25 years of articles published in *CDI*, investigating the social, intellectual, and conceptual structure of the journal. With regarded to the social structure of the journal, they illustrated strong international collaboration and noted a marked increase in the number of authors contributing to published articles. They highlighted elements of the intellectual structure, such as the most cited authors and articles, as well as analysing how various factors influence citation impact. To explore the conceptual structure, they illustrated five clusters of related articles—career development, work engagement, entrepreneurship career, career outcomes, and career mentoring—among a bibliographic coupling analysis, which is based on the assumption that articles on a similar topic will cite common references and, in turn, be cited together by subsequent articles. They also used author keywords, to trace trending topics over time.
+
+However, the methods used to explore the conceptual structure in Varma et al. [-@varma.kumar.ea2021] are limited in nature. Bibliographic coupling only captures surface-level relationships based on shared citations, potentially missing related papers that use different theoretical frameworks or cite different foundational works. Additionally, citations signal more than just topical relevance—including social networking, strategic positioning, and disciplinary signaling—meaning that shared reference patterns may reflect academic politics or citation conventions rather than genuine conceptual similarity. The method also operates at a much coarser granularity, treating entire documents as a single conceptual units, resulting in lower fidelity for understanding nuanced conceptual structures. Author keywords offer much smaller datasets for analysis—a half dozen words per article at most—and are undermined by redundancy, with the most common keyword in Varma et al. [-@varma.kumar.ea2021] being "career development".
+
+## Structural topic model of CDI
+
+In this article, we seek to explore the conceptual structure of *CDI* in greater depth and with greater nuance than afforded by keyword or bibliographic coupling. To do so, we apply the method Structural Topic Modeling [@lindstedt2019; @roberts.stewart.ea2019] to the abstracts of all articles published in *CDI* over its 30 year history. Structural topic modelling is an unsupervised statistical method that analyses patterns of word co-occurrence within large document collections. Clusters of co-occurring words represent latent topics which distinguish the texts in that topic from those in others. Researchers are therefore able map the conceptual structure of academic fields without bias from prior assumptions about topic boundaries or disciplinary classifications [@lindstedt2019; @roberts.stewart.ea2019]. Rather than assigning each text entirely to a given topic, STM allows texts to exhibit mixed membership across multiple topics—each text is a blend of articles and each text is a blend of topics—which provides nuanced insights into often closely related conceptual themes. Further, STM enables the use of other metadata variables, such as author names, affiliations, and year of publication, to explore more complex correlations and enable deeper comparison between topics. A recent STM study mapping employability research, published in *CDI,* demonstrated the fidelity, validity, and value of the method for the complex and diffuse field of career development [@healy.mcilveen.ea2025].
+
+# Method
+
+## Data collection and Preparation
+
+This retrospective analysis examined the complete corpus of articles published in *CDI* from its first issue in 1996 through to June 2025. Full bibliographic records, including abstracts, for all articles were retrieved from the Scopus database, with editorials and book reviews excluded, yielding 1186 articles.
+
+The primary data field for this STM analysis is the abstract, as it represents a detailed description of the content of each article. Abstracts were processed to enable precise analysis and reduce noise. Punctuation, numbers, standard English stopwords, common research article terminology (e.g., "study," "research," "findings"), and copyright statements were removed to focus the analysis on articles' substantive content. Finally, the abstracts were lemmatised, converting plural and conjugate forms of words to their base form (e.g.: managed, managing, and manages were all converted to manage), reducing noise from different grammatical variations of the same word.
+
+## Data analyisis
+
+### Topic number selection
+
+STM does not itself identify any empirically definitive number of topics in a corpus. It will generate exactly as many topics as requested by the researcher, but whether those topics represent meaningful, distinct, and coherent themes depends entirely on evaluation and interpretation by the researcher [@lindstedt2019; @roberts.stewart.ea2019]. The first step toward STM is to decide how many topics to model, which is done by first evaluating a range of candidate models and then iteratively narrowing them down to the one that is most meaningful [@lindstedt2019; @roberts.stewart.ea2019].
+
+First, candidate models ranging from 3 to 30 topics, in increments of three, were generated. These models were evaluated using quantitative measures of semantic coherence and exclusivity. Semantic coherence measures the probability that high-frequency words within topics co-occur in the same documents, while exclusivity assesses the degree to which words are distinctive to individual topics rather than shared across multiple themes [@roberts.stewart.ea2019]. The range between 6 and 15 topics showed the best balance between semantic coherence and exclusivity.
+
+A subsequent exploratory modelling of 6 to 15 topics, in increments of one, suggested that 9, 10, or 11 topics represented the best balance of semantic coherence and exclusivity. Manual qualitative inspection of the topic keywords and representative documents for these three models ultimately supported the 9-topic solution as offering the highest number of interpretable and theoretically meaningful topics, representing a comprehensive yet parsimonious representation of scholarship across the CDI's three-decade publication record.
+
+### Naming, describing, and validating the topics
+
+Just as STM does not identify how many topics there are in a corpus, nor does it describe what the topics mean, or indeed if they mean anything at all. That remains the job of the researcher, based on their knowledge of the data and the context of the research [@lindstedt2019; @roberts.stewart.ea2019]. Once the 9-topic model was chosen, the key words and representative texts for each topic (see table 1) were studied and a qualitative summary written for each. The summaries reflect the conceptual themes that are proportionally most aligned with each topic.
+
+STM provides the researcher with a matrix which includes, for each article, the proportion of words from the abstract that align with the words assigned to each topic. So, an article that deals exclusively with one topic would have a value of 1 for that topic and zero for all others, while an article that is perfectly evenly balanced across topics would show a value of approximately 0.111 for each. Similarly, the overall topic proportions for individual authors can be calculated from their individual articles, resulting in a kind of "conceptual fingerprint" [@healy.mcilveen.ea2025, p.228], as visualised in the findings section of this study.
+
+These visualisations provide the best method of validating the integrity and value of the topic model. Based on prior knowledge of an article's content or an author's ouvre, the researcher may predict what topic proportions they expect to be illustrated in the visualisation. Aberrant results can then be investigated to refine how the topics are understood and described, or in extreme cases, questioning the basic validity of the model.
+
+# Results
+
+## Nine topics in 30 years of CDI
+
+Our STM of 1186 articles published in *CDI* from 1996 to 2025 illustrates nine distinct topics in the research, as named and described below. The names and descriptions were not computationally created by the STM itself, they are qualitative interpretations of the topics by the authors. The keywords and representative texts for each topic, which informed the names and summaries below, are presented in table 1.
+
+### **Topic 1: Women’s careers and sustainable development**
+
+This topic explores the career experiences of women across cultural and professional settings with a focus on sustainable career development. It investigates barriers such as gender norms, motherhood, and migration, alongside strategies women use to build authentic and adaptable careers. Concepts like protean and boundaryless careers help explain women’s self-directed career paths. Research includes studies of entrepreneurs, academics, and professionals in diverse regions. The role of identity, social capital, and language is examined. This area supports efforts to promote gender equality and develop policies that enable women’s long-term career success and fulfilment.
+
+### **Topic 2: Job insecurity, engagement, and proactive behaviours**
+
+This topic examines how individuals experience job insecurity and actively respond to protect and advance their careers. It highlights how employees take initiative by helping colleagues, voicing ideas, and managing how they are perceived to maintain or improve performance during uncertain times. Personal traits such as resilience and adaptability combine with organisational support to shape these behaviours. The quality of leader relationships influences trust and engagement, which affects career stability. Understanding these dynamics offers insight into how individuals navigate uncertainty and proactively manage their career development despite challenging work environments.
+
+### **Topic 3: Work-family dynamics and well-being**
+
+This topic examines how individuals balance work and family roles and the impact on their well-being and career outcomes. It explores how conflicts between work and family can lead to burnout, emotional exhaustion, and decreased motivation, while positive interactions can enhance satisfaction and engagement. Personal factors like age, support from supervisors, and mindfulness influence these experiences. The effects often extend beyond the individual to their family life. Understanding these dynamics helps individuals and organisations create strategies to manage work-life balance, reduce stress, and support long-term career success and personal well-being.
+
+### **Topic 4: Recruitment and talent management**
+
+This topic explores how individuals experience recruitment and talent development in diverse and evolving labour markets. It examines how people engage with organisational processes, decision-making, and training programmes designed to support their integration and development. Additionally, it focuses on the challenges faced by diverse groups such as veterans, displaced workers, and employees in Small and Medium Enterprises (SMEs) as they navigate hiring and career growth opportunities. It also considers how individuals balance immediate job demands with long-term career goals. Insights help individuals understand and adapt to recruitment practices that promote inclusion, skill-building, and career advancement.
+
+### **Topic 5: Leadership and career change**
+
+This topic explores how individuals, especially leaders and professionals, navigate career transitions and adapt to organisational change. It focuses on personal development through executive coaching, targeted assessments, and leadership programmes that prepare them for new roles and challenges. The impact of unexpected career shocks and the need for proactive change management are highlighted. Ethical leadership and cultural awareness play important roles in these processes. By understanding these experiences, individuals can build resilience and effectively manage their career growth while contributing to organisational success in dynamic environments.
+
+### **Topic 6: Graduate employability, job search and career choice**
+
+This topic explores how graduates navigate the critical transition from education to the workforce. It looks at how personal factors like academic achievement, extracurricular involvement, personality traits, and generational influences shape their employability and job search strategies. Communication skills and entrepreneurial intentions are important for career success across diverse fields. The role of socio-cultural and educational experiences in shaping career aspirations is also examined. This research provides valuable insights to help graduates build confidence, make informed career choices, and develop skills needed for sustainable, fulfilling careers.
+
+### **Topic 7: Mentoring, relationships, and career development**
+
+This topic examines how individuals use mentoring relationships to support their career growth, learning, and professional identity development. It explores both formal and informal mentoring, focusing on the roles of mentors and protégés in providing guidance, emotional support, and skill development opportunities. The quality of these relationships influences career progression and personal growth. Challenges like maintaining commitment and managing potential conflicts are also addressed. Additionally, mentoring benefits mentors through expanded networks and self-improvement. Understanding these dynamics helps individuals maximise mentoring opportunities to advance their careers and strengthen their professional skills.
+
+### **Topic 8: Expatriate careers and international adjustment**
+
+This topic explores the personal and professional experiences of expatriates and self-initiated expatriates on international assignments. It examines how individuals culturally adjust, find job satisfaction, and develop their careers while working abroad. The role of organisational support, training, and networking in aiding successful transitions is highlighted. Special attention is given to challenges faced by female expatriates and the importance of diversity and inclusion. Understanding these factors helps individuals navigate global mobility, build cultural competence, and shape their career paths. Insights inform policies to enhance expatriate success and career growth through international opportunities.
+
+### Topic 9: **Work identity and temporary or precarious employment**
+
+This topic explores how individuals develop and maintain their professional identity while navigating temporary or insecure employment. It focuses on the personal challenges faced by those with short-term contracts or unstable jobs and how these affect their self-concept and career growth. It considers how work-life balance, organisational connection, and social status influence identity during employment uncertainty. The topic also highlights the experiences of refugees and migrants whose careers are affected by wider social and political contexts. Understanding these perspectives helps individuals manage identity and career development despite precarious work conditions.
+
+\[Table 1 here\]
+
+## Trends in topics over 30 years
+
+Figure 1. illustrates trends in the proportion of each topic, by year of publication. As is clearly visible, *CDI*'s initial focus was on the management of other people's careers by managers and leaders, with leadership and career change and recruitment and talent management being the most studied topics for the first seven years. However, this focus receded rapidly and was overtaken in the early 2000s by scholarship focused more on worker characteristics, needs, dynamics, and agency, such as women's careers, work-family dynamics and wellbeing, graduate employability, and job insecurity. In 2025, the most studied topics, women's career development and job insecurity, share a concern for equity, agency, and empowerment in career development.
+
+![Figure 1. Topic proportions by year of publication.](output/plot_9_topics_PY.png){fig-align="center"}
+
+## Topics by author
+
+Figure 2. illustrates the topic proportions of a selection of 15 authors who have contributed the most articles to CDI, whose work in CDI has been the most highly cited, or who appear as authors on this paper. This figure is based only on the articles for which these authors appear first in the list of authors, to more specifcially reflect their particular research interests. The "conceptual fingerprint" offered by the STM clearly show the scholarly interests of each author, as well as identifying which have broad interests (e.g.: Akkermans, Baruch, Donald) and which are more specialised (e.g.: Arthur, Jawahar, Scheufeli).
+
+![Figure 2. Topic proportions by author.](output/plot_9_topics_AU1.png)
+
+## Topics by article
+
+Figure 3. illustrates topic proportions of a selection of 12 highly cited articles. The visualisations illustrate the latent topics of each article, which sometimes reflect a focus that is not intuitively aligned with the articles title or keywords, based as it is only on the language used in the abstracts. For example, Schaufeli et al.'s (2009) review of burnout research is labelled as work identity and temporary or precarious work, rather than work-life balance and wellbeing, because it is more a conceptual, phenomenological, and socio-cultural study than it is an account of the causes and outcomes of burnout.
+
+![Figure 3. Topic proportions by article.](output/plot_9_topics_ref.png)
+
+## Topic prevalence and citation impact
+
+"Figure 4. illustrates the relationship between topic prevalence and average citation impact, with the bubble size indicating the number of articles where each topic is prominent (\>10% topic proportion). The figure illustrates that the most frequently studied topics are not necessarily the most highly cited. The most impactful topics, in terms of average citations, are job insecurity, engagement, and proactive behaviours, and work identity and temporary and precious work, the latter of which is the smallest topic in the dataset.
+
+![Figure 4. Citation impact of topics.](output/plot_9_topics_TC.png)
+
+# Discussion
+
+Our findings regarding conceptual structure align broadly with those of Varma et al. [-@varma.kumar.ea2021] but with greater granularity and fidelity.
+
+# Conclusion
