@@ -313,7 +313,7 @@ current_topic_order <- nine_topics_data %>%
   pull(Topic)
 
 # Define your final topic names 
-nine_topics <- c("1. Women's careers and sustainable development",
+nine_topics <- c("1. Sustainable, protean, boundaryless, and women's careers",
                  "2. Job insecurity, engagement, and proactive behaviours",  
                  "3. Work-family dynamics and well-being", 
                  "4. Recruitment and talent management", 
@@ -372,9 +372,9 @@ topics_by_AU1 <- nine_topics_data %>%
   select(AU1, all_of(nine_topics)) %>%
   filter(
     AU1 %in% c("AKKERMANS J", "ARTHUR MB", "BARUCH Y", "BAKKER AB",
-               "BRISCOE JP", "DEMEROUTI E", "DONALD WE", "FERRIS GR",
+               "BRISCOE JP", "DEMEROUTI E", "DONALD WE", "FERRIS GR", "HOFER A",
                "HALL DT", "HARRISON JA", "JAWAHAR IM", "KHAPOVA SN",
-               "KUNDI YM", "SCHAUFELI WB", "STUMPF SA", "SULLIVAN SE",
+               "KUNDI YM", "LO PRESTI A", "SCHAUFELI WB", "STUMPF SA", "SULLIVAN SE",
                "VAN DER HEIJDEN B")
   ) %>%
 
@@ -596,7 +596,7 @@ plot_topics_by_year <-
     # Legend positioning
     legend.position = "bottom",
     legend.key.size = unit(0.4, "cm"),
-    legend.margin = margin(t = 10),
+    legend.margin = margin(t = 40),
     
     # Panel formatting
     panel.grid.major = element_line(color = "grey90", size = 0.3),
@@ -726,8 +726,8 @@ ggsave(
   "plot_9_topics_TC.png",
   plot_topics_by_TC,
   path = "output/",
-  width = 18,  # Increased from 14
-  height = 12, # Increased from 10
+  width = 16,  # Increased from 14
+  height = 14, # Increased from 10
   dpi = 300,
   bg = "white"
 )
